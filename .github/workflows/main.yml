@@ -1,0 +1,21 @@
+
+name: Build and Release
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Build Latex
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: resume.pdf
