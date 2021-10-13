@@ -1,46 +1,45 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                Identification
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 \documentclass{resume}
 \geometry{letterpaper,portrait,margin=0.75in}
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                Contact info
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ContactName
-{Thomas Nieuwland}                              % first and last name
-
-%\ContactInfoPhysical
-%{123 Main Street}                         % house and street
-%{City, State  ZIP}                        % city, state, zip
-%{USA}                                     % country
+{Thomas Nieuwland}
 
 \ContactInfoDigital
-  {tel:+61431685686}                      % phone URL (with int'l code)
-  {0431685686}                           % phone display text
-  {mailto:thomasnieuwland19@gmail.com}                % email URL
-  {thomasnieuwland19@gmail.com}                       % email display text
-  {https://tomnieuw.land}                     % web URL
-  {tomnieuw.land}                             % web display text
+  {tel:+61431685686}
+  {0431685686}
+  {mailto:thomasnieuwland19@gmail.com}
+  {thomasnieuwland19@gmail.com}
+  {https://tomnieuw.land}
+  {tomnieuw.land}
   {https://www.linkedin.com/in/thomas-ronald-nieuwland/}
   {Thomas Nieuwland}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                About Me
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{{\faUser} About Me}
-I'm a 24 year old Fullstack Engineer with a passion for back end development, tooling, automation and cloud computing. I love to muck around
-with all sorts of weird and wonderful tech, no matter how bleeding edge. \\
-I'm also an avid video game enthusiast who loves a good book as well as a bit of a music snob, who likes to mess around with a DJ controller in his spare time.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                Work experience
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I'm a 25 year old software engineer with a knack for getting software teams running like well oiled machines. During my 
+career I have filled a variety of different roles, which has helped me to discover that I am truly passionate about 
+enabling other developers to perform efficiently through the use of automation and intelligent tooling.
+\\~\\
+In my spare time I'm an avid video game enthusiast who loves to ride mountain bikes. I'm also a self-described music
+snob, who can usually be found either at the record store, the pub or in my house messing around with turntables.
 
 \section{{\faBriefcase} Experience}
+\PlaceAndLocation{Douugh}{Sydney, Australia} \\
+\TitleAndYears{Senior Software Engineer}{February 2021 - Present} \\
+Duties \\
+\begin{itemize}
+  \item Managing various elements of cloud infrastructure
+  \item Incident triage, response and resolution
+  \item Architecture and implementation of core API functionality such as instant debit card funding and user membership
+\end{itemize}
+
+\bigskip
 \PlaceAndLocation{Grok Learning}{Sydney, Australia} \\
-\TitleAndYears{Mid Software Engineer}{December 2019 - Present} \\
+\TitleAndYears{Software Engineer}{December 2019 - February 2021} \\
 Duties \\
 \begin{itemize}
   \item Design and implementation of features and functionality for the Grok Learning platform
@@ -49,15 +48,15 @@ Duties \\
 \end{itemize}
 Accomplishments \\
 \begin{itemize}
-  \item Spearheaded upcoming conversion of database from Javascript to Typescript
+  \item Spearheaded conversion of codebase from Javascript to Typescript
   \item Implemented university examination functionality as well as university rubric based marking into the platform
-  \item Major refactor of multiple core objects that are key to Grok functionality
+  \item Major refactor of multiple core components that are key to Grok functionality
 \end{itemize}
 
 \bigskip
 \PlaceAndLocation{Rotor Studios}{Sydney, Australia} \\
 \TitleAndYears{Core Tech and Pipeline Developer}{April 2019 - December 2019} \\
-\TitleAndYears{Mid Fullstack Developer}{December 2018 - April 2019} \\
+\TitleAndYears{Mid-level Fullstack Developer}{December 2018 - April 2019} \\
 \TitleAndYears{Junior Fullstack Developer}{December 2017 - December 2018} \\
 Duties \\
 \begin{itemize}
@@ -68,7 +67,7 @@ Duties \\
 Accomplishments \\
 \begin{itemize}
   \item Design and implementation of internal analytics and tracking framework
-  \item Design and implementation of core internal database to be used as a source of truth for the company
+  \item Design and implementation of core internal database using DDD methodology 
   \item Batch image processing pipeline utilising AWS Lambda, which massively reduced both time and cost for the company
 \end{itemize}
 
@@ -79,9 +78,6 @@ Accomplishments \\
 \bigskip
 \PlaceAndLocation{St George \& Sutherland Community College}{Sydney, Australia} \\
 \TitleAndYears{Computer Science Tutor}{December 2015 - February 2017} \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                Education
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{{\faGraduationCap} Education}
 \PlaceAndLocation{Bachelor of Computer Science}{University of Wollongong} \\
@@ -90,25 +86,21 @@ Accomplishments \\
 \PlaceAndLocation{Higher School Certificate}{St John Bosco College} \\
 \TitleAndYears{}{2008 - 2014} \\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                Skills
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{{\faCheck} Skills}
 I have experience in the following areas \\
 \bigskip
 \begin{minipage}[t]{0.3\textwidth}
   \begin{itemize}
-    \item Python 2/3
+    \item Python
     \begin{itemize}
       \item Django
       \item Flask
       \item Celery
       \item DRF
     \end{itemize}
-    \item Javascript (Node \& ES6)
-    \item Typescript
+    \item Javascript/Typescript (frontend and backend)
     \item C++
+    \item Golang
   \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
@@ -117,14 +109,12 @@ I have experience in the following areas \\
     \begin{itemize}
       \item PostgreSQL
       \item MariaDB
-      \item OracleDB
       \item MongoDB
-      \item CouchDB
       \item Elasticsearch
-      \item ElastiCache
       \item Redis
     \end{itemize}
     \item Docker \& Docker Compose
+    \item Github/Bitbucket CI/CD
     \item RabbitMQ
   \end{itemize}
 \end{minipage}
@@ -133,9 +123,11 @@ I have experience in the following areas \\
     \item AWS
     \begin{itemize}
       \item Lambda
+      \item Cloudwatch Monitoring and Alerting
       \item Kinesis
-      \item Aurora
+      \item RDS/Aurora Clusters
       \item DynamoDB
+      \item ElastiCache
       \item EC2
       \item ECS
       \item SNS
