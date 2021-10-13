@@ -11,11 +11,16 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Build Latex
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: ncipollo/release-action@v1
         with:
-          files: resume.pdf
+          artifacts: "resume.pdf"
+          tag: resume-${{ steps.date.outputs.date }}
+          token: ${{ secrets.GH_TOKEN }}
